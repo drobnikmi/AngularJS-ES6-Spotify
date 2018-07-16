@@ -12,10 +12,10 @@ export default (() => {
     angular.module('app', [])
       .controller('homeController', homeController)
       .service('albumService', albumService)
-      .factory('authService', authService)
+      .service('authService', authService)
       .factory('bearerAuthService', bearerAuthService)
       .config( ($httpProvider) => {
-        $httpProvider.interceptors.push('authService', 'bearerAuthService');
+        $httpProvider.interceptors.push('bearerAuthService');
       });
 })();
 
