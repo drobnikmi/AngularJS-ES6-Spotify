@@ -8,7 +8,7 @@
     "url": "https://github.com/thiagobitencourt/es6-seed"
   },
   "scripts": {
-    "test": "karma start",
+    "test": "karma start --no-single-run --auto-watch",
     "start": "webpack-dev-server -d --hot --config webpack.config.js --watch",
     "build": "webpack",
     "build:p": "NODE_ENV=production webpack",
